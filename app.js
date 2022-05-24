@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('app.js:', data);
 
   // data.products.forEach(product => console.log(product.name));
-  
+
   const products = document.querySelector("#products");
   
   for (const product of data.products) {
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addToList = function(detail) {
       productDetail = document.createElement("li");
       productDetail.textContent = product[detail];
+      productDetail.classList.add("product")
       productList.appendChild(productDetail);
     }
     
